@@ -12,3 +12,9 @@ function shallowEquals(obj1, obj2) {
 
   return res;
 }
+
+console.log(shallowEquals({ a: 1, b: "2" }, { a: 1, b: "2" }));
+console.log(shallowEquals({ a: 0 }, { a: undefined }));
+console.log(shallowEquals({ a: {} }, { a: {} }));
+console.log(shallowEquals({ a: [] }, { a: [] }));
+console.log(shallowEquals({ a: () => {} }, { a: () => {} }));
